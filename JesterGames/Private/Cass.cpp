@@ -5,10 +5,8 @@
 #include "Components/CapsuleComponent.h"
 #include "Kismet/GameplayStatics.h"
 
-// Sets default values
 ACass::ACass()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	
 	CharachterStamina = 100;
@@ -43,21 +41,19 @@ bool ACass::StaminaIsZero()
 	UGameplayStatics::SpawnSoundAtLocation(this, TiredSound, GetActorLocation());
 }
 
-// Called when the game starts or when spawned
 void ACass::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
-// Called every frame
+
 void ACass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
-// Called to bind functionality to input
 void ACass::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
